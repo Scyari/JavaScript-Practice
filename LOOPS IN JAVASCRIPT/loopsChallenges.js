@@ -32,13 +32,13 @@ let teaCollection = [];   // black array to fill
 let tea
 
 do {
-    tea = prompt(`enter your fav tea(type "stop" to finish)`)  // keyword stop
+    tea = prompt(`enter your fav tea(type "stop" to finish)`)  // tea = prompt(); storing data
 
     if (tea !== "stop") {
-        teaCollection.push(tea)   // untill tea not equals to "stop" it keep pushing the loop
+        teaCollection.push(tea)   // adding items in "array" untill user types "stop" OR the statement FALSE
     }
 
-} while (tea !== "stop");       // loop works untill user dont write "stop"
+} while (tea !== "stop");       // loop works untill user dont write "stop" OR the statement FALSE
 //google console 
 
 
