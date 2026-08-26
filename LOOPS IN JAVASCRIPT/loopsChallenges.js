@@ -17,8 +17,8 @@ console.log(sum);
 
 let countdown = [];
 let j = 5;
-while (j > 0) {               //j greater than 0
-    countdown.push(j);
+while (j > 0) {               //j or 5 greater than 0
+    countdown.push(j);        // pushing the loop
     j--;                      // value decreasing -1 to end the loop 
 }
 console.log(countdown);
@@ -41,4 +41,34 @@ do {
 } while (tea !== "stop");       // loop works untill user dont write "stop" OR the statement FALSE
 //google console 
 
+/*
+3. write a "do while" loop  that adds numbers from 1 to 3 and stores the result in a variable named "total".
+*/
 
+let total = 0;
+let k = 1;
+do {
+    total += k;
+    k++;
+} while (k <= 3);
+
+/*
+5. write a for loop that multiplies each element in the array [2,4,6] by 2 and stores the result in a new array named "multipliedNumbers".
+*/
+
+let multipliedNumbers = [];
+let numbers = [2, 4, 6];
+
+// for (initPhase; condition; incre/decre){}     if loop template
+
+/* 
+for (l = 0; l < numbers.length; l++) {
+    multipliedNumbers.push(numbers[l] * 2);     in one line
+}
+    */
+
+for (let l = 0; l > numbers.length; l--) {
+    takeNumbers = numbers[l] * 2;
+    multipliedNumbers.push(takeNumbers);
+}
+console.log(multipliedNumbers);
