@@ -59,16 +59,28 @@ do {
 let multipliedNumbers = [];
 let numbers = [2, 4, 6];
 
-// for (initPhase; condition; incre/decre){}     if loop template
+// for (initPhase; condition; incre/decre){}       for loop template
 
 /* 
 for (l = 0; l < numbers.length; l++) {
-    multipliedNumbers.push(numbers[l] * 2);     in one line
+    multipliedNumbers.push(numbers[l] * 2);         in one line
 }
     */
 
-for (let l = 0; l > numbers.length; l--) {
+for (let l = 0; l < numbers.length; l++) {
     takeNumbers = numbers[l] * 2;
     multipliedNumbers.push(takeNumbers);
 }
 console.log(multipliedNumbers);
+
+
+/* 
+6. write a "for" loop that lists all the cities in the array ["paris", "new york", "london", "tokyo"] and stores each city in a new array named "citylist".
+*/
+
+let array = ["Paris", "New York", "London", "Tokyo"];
+let Cityname = [];
+for (let i = 0; i < array.length; i++) {
+    Cityname.push(array[i]);
+}
+console.log(Cityname);
