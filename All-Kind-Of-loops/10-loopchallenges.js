@@ -36,7 +36,7 @@ for (let i = 0; i < place.length; i++) {
 
 /*
 
-3. Write a "for -of" loop to iterate through the array [1, 2, 3, 4, 5] and stop when the number "4" is found.
+3. Write a "for" loop to iterate through the array [1, 2, 3, 4, 5] and stop when the number "4" is found.
 
    store the numbers before "4" in a new array named "smallNumbers".
    */
