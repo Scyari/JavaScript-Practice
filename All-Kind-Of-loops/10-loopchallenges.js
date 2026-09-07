@@ -132,7 +132,7 @@ for (const city in WorldCities) {
     largeCities[city] = WorldCities[city];   // copy in array format 
 }
 // console.log(largeCities);          //{ Sydney: 5000000, Tokyo: 9000000, Berlin: 3500000 }
-
+``  `   ~`
 
 /*
 7. Write a "forEach" loop that iterates through the array ["earl gray", "green tea", "chai", "oolong tea"].
@@ -155,3 +155,19 @@ Teas.forEach(function (tea) {
     availabeTeas.push(tea);
 });
 // console.log(availabeTeas);      //  Output:  [ 'earl gray', 'green tea', 'oolong tea' ]
+
+
+/*
+8. Write a "forEach" loop that iterates through the array ["london", "new york", "paris", "berlin"].
+  skip "paris" and store the other cities in a new array named "traveledCities".
+  */
+
+let cities = ["london", "new york", "paris", "berlin"];
+let traveledCities = [];
+cities.forEach(city => {
+    if (city === "paris") {
+        return;
+    }
+    traveledCities.push(city);
+})
+console.log(traveledCities);    //  Output: [ 'london', 'new york', 'berlin' ]
