@@ -170,4 +170,22 @@ cities.forEach(city => {
     }
     traveledCities.push(city);
 })
-console.log(traveledCities);    //  Output: [ 'london', 'new york', 'berlin' ]
+// console.log(traveledCities);    //  Output: [ 'london', 'new york', 'berlin' ]
+
+
+/* 
+10. Write a "for" loop that iterates through the array [ 2, 5, 7, 9,].
+   
+       skip the value "7" and multiply the rest by 2 and store the results in a new array named "doubledNumbers".
+*/
+
+let num = [2, 5, 7, 9];
+let doubledNumbers = [];
+
+for (let i = 0; i < num.length; i++) {
+    if (num[i] === 7) {
+        continue;
+    }
+    doubledNumbers.push(num[i] * 2);    // multiply by 2
+}
+console.log(doubledNumbers);        //  Output: [ 4, 10, 18 ]
