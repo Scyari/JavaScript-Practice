@@ -188,4 +188,22 @@ for (let i = 0; i < num.length; i++) {
     }
     doubledNumbers.push(num[i] * 2);    // multiply by 2
 }
-console.log(doubledNumbers);        //  Output: [ 4, 10, 18 ]
+// console.log(doubledNumbers);        //  Output: [ 4, 10, 18 ]
+
+
+/*
+ 10. Use a "for-of" loop that iterate through the array ["chai", "green tea", "black tea", "jasmine tea", "herbal tea"].
+    and skip when the length of the current tea name is greater than 10.
+    store the teas iterated over in a array named "shortTeas".
+*/
+
+let teass = ["chai", "green tea", "black tea", "jasmine tea", "herbal tea"];
+let shortTeas = [];
+
+for (const tea of teass) {
+    if (tea.length > 10) {      // (tea.length > 10) checking condition
+        break;
+    }
+    shortTeas.push(tea);
+}
+console.log(shortTeas);       //  Output: [ 'chai', 'green tea', 'black tea' ]
