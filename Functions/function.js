@@ -25,7 +25,7 @@ function orderTea(teaType) {
     function confirmOrder() {                  // function inside function
         return `order confirmed for chai`;     //return value
     }
-    return confirmOrder()      // calling function within function
+    return confirmOrder()      // calling function inside function
 }
 let orderConfirmation = orderTea("Black Coffee");   // argument
 console.log(orderConfirmation);         //output-- > order confirmed for chai
