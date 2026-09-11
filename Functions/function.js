@@ -28,5 +28,20 @@ function orderTea(teaType) {
     return confirmOrder()      // calling function inside function
 }
 let orderConfirmation = orderTea("Black Coffee");   // argument
-console.log(orderConfirmation);         //output-- > order confirmed for chai
+// console.log(orderConfirmation);         //output-- > order confirmed for chai
+
+/*
+3. write an arrow function nameed "calculateTotal" that takes two parameters: "price" and "quantity". the function should return the total cost by multiplying the "price" and "quantity".
+    store the result in a variable named "totalCost".
+    
+*/
+
+// function greet () {}
+// const greet = () => {}
+
+const calculateTotal = (price, quantity) => {
+    return price * quantity
+}
+
+let totalCost = calculateTotal(400 * 200)
 
