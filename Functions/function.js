@@ -45,3 +45,22 @@ const calculateTotal = (price, quantity) => {
 
 let totalCost = calculateTotal(400 * 200)
 
+
+/* 4. Write a function named "processTeaOrder" that takes another function, "make tea", as a parameter and calls it with argument "earl grey".
+    return the result of calling "makeTea"
+ */
+
+function makeTea(typeOfTea) {
+    return `maketea: ${typeOfTea}`
+}
+
+function processTeaOrder(teaFunction) {
+    return teaFunction("earl grey")
+}
+
+let order = processTeaOrder(makeTea)
+// console.log(order);                  //output-- > maketea: earl grey
+
+
+/*
+5.
