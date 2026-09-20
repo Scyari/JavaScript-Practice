@@ -84,3 +84,18 @@ for (let i = 0; i < array.length; i++) {
     Cityname.push(array[i]);
 }
 console.log(Cityname);
+
+
+
+/*
+7. find lowest number from an array
+*/
+
+let a = [1, 3, 5, 8, 9];
+let b = a[0];
+for (let i = 1; i < a.length; i++) {
+    if (a[i] < b) {    //conditon to find low
+        b = a[i];  //clarifying to call
+    }
+}
+console.log(b)     //outPUT --> 1
