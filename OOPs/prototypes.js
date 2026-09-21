@@ -17,4 +17,5 @@ let tesla = {
 Object.setPrototypeOf(tesla, genericCar)  //using Object.setPrototypeOf method * mirror of dunder method
 
 // console.log(`tesla`, tesla);   //Output --> tesla { driver: 'Ai' }
-console.log(`tesla`, tesla, Object.getPrototypeOf(tesla),);   //Output --> tesla { driver: 'Ai' } { tyres: 4 }
+
+// console.log(`tesla`, tesla, Object.getPrototypeOf(tesla),);   //Output --> tesla { driver: 'Ai' } { tyres: 4 }
