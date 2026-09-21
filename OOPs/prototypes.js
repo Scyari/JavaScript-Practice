@@ -10,3 +10,10 @@ let lg = {};
 
 
 
+let genericCar = { tyres: 4 }
+let tesla = {
+    driver: "Ai",
+};
+Object.setPrototypeOf(tesla, genericCar)  //using Object.setPrototypeOf method * mirror of dunder method
+
+console.log(`tesla`, tesla);
