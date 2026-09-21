@@ -10,7 +10,7 @@ let lg = {};
 //Output --> samsung { cpu: 12 }
 
 
-let genericCar = { tyres: 4 }
+let genericCar = { tyres: 4 }  //inheriting property 
 let tesla = {
     driver: "Ai",
 };
