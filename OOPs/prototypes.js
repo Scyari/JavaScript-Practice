@@ -7,7 +7,7 @@ let samsung = {
 let lg = {};
 
 // console.log(`samsung`, samsung.__proto__); //Acces prototype of any particular object
-
+//Output --> samsung { cpu: 12 }
 
 
 let genericCar = { tyres: 4 }
@@ -16,4 +16,5 @@ let tesla = {
 };
 Object.setPrototypeOf(tesla, genericCar)  //using Object.setPrototypeOf method * mirror of dunder method
 
-console.log(`tesla`, tesla);
+// console.log(`tesla`, tesla);   //Output --> tesla { driver: 'Ai' }
+console.log(`tesla`, tesla, Object.getPrototypeOf(tesla),);   //Output --> tesla { driver: 'Ai' } { tyres: 4 }
