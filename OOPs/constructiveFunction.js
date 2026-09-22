@@ -8,7 +8,7 @@
 
 
 function Person(name, age) {
-    this.name = name
+    this.name = name   // connect with the parameter
     this.age = age
 }
 
@@ -17,7 +17,7 @@ function car(make, model) {
     this.model = model
 }
 
-let mycar = new car("Totyota", "Audi");
+let mycar = new car("Totyota", "Audi");    //connect with the name
 // console.log(mycar);       //  Output --> car { make: 'Totyota', model: 'Audi' }
 
 let myNewCar = new car("Tata", "Mosquoto");
@@ -32,4 +32,18 @@ function tea(type) {
 }
 
 let lemontea = new tea("lemon Tea");
-console.log(lemontea.describe());      //  Output --> this is a cup of lemon Tea 
+// console.log(lemontea.describe());         //  Output --> this is a cup of lemon Tea 
+
+
+
+function animal(species) {
+    this.species = species;
+    this.describe = function () {
+        return `the species of the animal ${this.species}`
+    };
+};
+let AnimalSpecies = new animal("PeaCock");
+console.log(AnimalSpecies.describe());        //  Output --> the species of the animal PeaCock
+
+
+
