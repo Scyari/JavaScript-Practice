@@ -19,3 +19,4 @@ Object.setPrototypeOf(tesla, genericCar)  //using Object.setPrototypeOf method *
 // console.log(`tesla`, tesla);   //Output --> tesla { driver: 'Ai' }
 
 // console.log(`tesla`, tesla, Object.getPrototypeOf(tesla),);   //Output --> tesla { driver: 'Ai' } { tyres: 4 }
+
