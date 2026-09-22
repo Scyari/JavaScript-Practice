@@ -18,8 +18,18 @@ function car(make, model) {
 }
 
 let mycar = new car("Totyota", "Audi");
-console.log(mycar);
+// console.log(mycar);       //  Output --> car { make: 'Totyota', model: 'Audi' }
 
 let myNewCar = new car("Tata", "Mosquoto");
-console.log(myNewCar);
+// console.log(myNewCar);       //  Output --> car { make: 'Tata', model: 'Mosquoto' }
 
+
+function tea(type) {
+    this.type = type;
+    this.describe = function () {
+        return `this is a cup of ${this.type}`  // connecting with (this.type)
+    };
+}
+
+let lemontea = new tea("lemon Tea");
+console.log(lemontea.describe());      //  Output --> this is a cup of lemon Tea 
