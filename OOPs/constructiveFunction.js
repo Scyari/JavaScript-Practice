@@ -43,7 +43,20 @@ function animal(species) {
     };
 };
 let AnimalSpecies = new animal("PeaCock");
-console.log(AnimalSpecies.describe());        //  Output --> the species of the animal PeaCock
+// console.log(AnimalSpecies.describe());        //  Output --> the species of the animal PeaCock
 
 
 
+
+function toy(variety) {
+    this.variety = variety;
+}
+
+toy.prototype.sound = function () {
+    return `the toy variety is ${this.variety}`
+}
+let beyblade = new toy("Pegasaus");
+console.log(beyblade.sound());     //  Output --> the toy variety is Pegasaus
+
+let Politican = new toy("Pappu");
+console.log(Politican.sound());     //  Output --> the toy variety is Pappu
