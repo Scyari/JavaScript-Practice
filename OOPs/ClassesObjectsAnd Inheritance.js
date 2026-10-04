@@ -57,5 +57,8 @@ class Car extends Vehicle {
 }
 
 let myCar = new Car("Toyota", "Tata");
-console.log(myCar.start());      //Tata is a car from Toyota
-console.log(myCar.drive());     //Toyota: This is an inheritance example 
+// console.log(myCar.start());      //Tata is a car from Toyota
+// console.log(myCar.drive());     //Toyota: This is an inheritance example 
+
+let vehOne = new Vehicle("Toyota", "Camella");
+console.log(vehOne.make)
