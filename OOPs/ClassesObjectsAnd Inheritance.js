@@ -36,4 +36,26 @@ let myArray = [1, 2, 3];
 console.log(myArray.ari());         //  Output --> the array is 1,2,3
 
 let myNewArray = [1, 2, 3, 4, 5, 6];
-console.log(myNewArray.ari());    //  Output --> the array is 1,2,3,4,5,6
+// console.log(myNewArray.ari());    //  Output --> the array is 1,2,3,4,5,6
+
+
+class Vehicle {
+    constructor(make, model) {
+        this.make = make;
+        this.model = model;
+    }
+
+    start() {
+        return `${this.model} is a car from ${this.make}`
+    }
+}
+
+class Car extends Vehicle {
+    drive() {
+        return `${this.make}: This is an inheritance example `;
+    }
+}
+
+let myCar = new Car("Toyota", "Tata");
+console.log(myCar.start());      //Tata is a car from Toyota
+console.log(myCar.drive());     //Toyota: This is an inheritance example 
