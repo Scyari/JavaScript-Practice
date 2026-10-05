@@ -79,5 +79,33 @@ class bankAccount {
 }
 
 let account = new bankAccount()
-// console.log(account.#balance);  //undefined
-console.log(account.getBalance());   //$ 0 
+// console.log(account.#balance);  //undefined because it dont give direct Access to data
+// console.log(account.getBalance());   //$ 0 (Right)
+
+
+// Abstraction (it hides the complex implementation detail)
+
+class Wishlist {
+    start() {
+        // call DB
+        // filter Value
+        return `Open mah wishlist`;
+    }
+    brewWishlist() {
+        //complex calcaulation (how much u brew the Wishlist)
+        return `Brewing Wishlist`;
+    }
+    pressStartButton() {
+        let msgOne = this.start();
+        let msgTwo = this.brewWishlist();   // Variable mustbe called with "This." method
+        return `${msgOne} + ${msgTwo}`;
+
+    }
+}
+
+let MyWishlist = new Wishlist();
+// console.log(MyWishlist.start());          //Open mah wishlist
+// console.log(MyWishlist.brewWishlist());    //Brewing Wishlist
+
+
+console.log(MyWishlist.pressStartButton());     //Open mah wishlist + Brewing Wishlist  
