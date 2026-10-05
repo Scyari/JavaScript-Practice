@@ -60,5 +60,24 @@ let myCar = new Car("Toyota", "Tata");
 // console.log(myCar.start());      //Tata is a car from Toyota
 // console.log(myCar.drive());     //Toyota: This is an inheritance example 
 
-let vehOne = new Vehicle("Toyota", "Camella");
-console.log(vehOne.make)
+// let vehOne = new Vehicle("Toyota", "Camella");
+// console.log(vehOne.make)
+
+
+// Encapsulation (Restricting direct access to data)
+
+class bankAccount {
+    #balance = 0;      // `# ` use for encapsulation
+
+    deopsit(amount) {
+        this.#balance += amount;
+        return this.#balance;
+    }
+    getBalance() {
+        return `$ ${this.#balance}`;
+    }
+}
+
+let account = new bankAccount()
+// console.log(account.#balance);  //undefined
+console.log(account.getBalance());   //$ 0 
