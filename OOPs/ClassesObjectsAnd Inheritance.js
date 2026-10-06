@@ -64,7 +64,7 @@ let myCar = new Car("Toyota", "Tata");
 // console.log(vehOne.make)
 
 
-// Encapsulation (Restricting direct access to data)
+// 1. Encapsulation (Restricting direct access to data)
 
 class bankAccount {
     #balance = 0;      // `# ` use for encapsulation
@@ -83,7 +83,8 @@ let account = new bankAccount()
 // console.log(account.getBalance());   //$ 0 (Right)
 
 
-// Abstraction (it hides the complex implementation detail)
+
+// 2. Abstraction (it hides the complex implementation detail)
 
 class Wishlist {
     start() {
@@ -106,6 +107,25 @@ class Wishlist {
 let MyWishlist = new Wishlist();
 // console.log(MyWishlist.start());          //Open mah wishlist
 // console.log(MyWishlist.brewWishlist());    //Brewing Wishlist
+// console.log(MyWishlist.pressStartButton());     //Open mah wishlist + Brewing Wishlist  
 
 
-console.log(MyWishlist.pressStartButton());     //Open mah wishlist + Brewing Wishlist  
+// 3. Polymorphism (Many forms of same method)
+
+class Bird {
+    fly() {
+        return `Bird can fly`;
+    }
+}
+
+class Penghuin extends Bird {
+    fly() {
+        return `Penguins can't fly`;
+    }
+}
+
+let bird = new Bird();
+let penguin = new Penghuin();
+console.log(bird.fly());
+console.log(penguin.fly());
+
