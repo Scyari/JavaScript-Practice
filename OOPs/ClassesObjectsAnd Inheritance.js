@@ -119,13 +119,13 @@ class Bird {
 }
 
 class Penghuin extends Bird {
-    fly() {
+    fly() {       //calling same function as bird
         return `Penguins can't fly`;
     }
 }
 
 let bird = new Bird();
 let penguin = new Penghuin();
-console.log(bird.fly());
-console.log(penguin.fly());
+console.log(bird.fly());    //Bird can fly
+console.log(penguin.fly());  //Penguins can't fly
 
