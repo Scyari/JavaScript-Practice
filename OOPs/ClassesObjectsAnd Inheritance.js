@@ -130,7 +130,6 @@ let penguin = new Penghuin();
 // console.log(penguin.fly());  //Penguins can't fly
 
 // static method
-
 class Calculator {
     static add(a, b) {
         return a + b;
@@ -140,3 +139,38 @@ class Calculator {
 // let miniCal = new Calculator;
 // console.log(miniCal.add(2, 3));  //doesnt work
 console.log(Calculator.add(2, 3));  //Need to call the class name (then it gonna work)
+
+
+// Getters and Setters
+class Employee {
+    #salary;
+
+    constructor(name, salary) {
+        if (salary < 0) {
+            throw new Error("Salary cannot be negative");
+        }
+
+        this.name = name;
+        this.#salary = salary;
+    }
+
+    get salary() {
+        return "You are not allowed to see the salary";
+    }
+
+    set salary(value) {
+        if (value < 0) {
+            console.error("Invalid Salary");
+        } else {
+            this.#salary = value;
+        }
+    }
+}
+
+let emp = new Employee("Arindam", 50000);
+
+console.log(emp.salary);  // You are not allowed to see the salary
+
+emp.salary = 600000;
+
+console.log(emp.salary);  // You are not allowed to see the salary
