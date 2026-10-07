@@ -126,6 +126,17 @@ class Penghuin extends Bird {
 
 let bird = new Bird();
 let penguin = new Penghuin();
-console.log(bird.fly());    //Bird can fly
-console.log(penguin.fly());  //Penguins can't fly
+// console.log(bird.fly());    //Bird can fly
+// console.log(penguin.fly());  //Penguins can't fly
 
+// static method
+
+class Calculator {
+    static add(a, b) {
+        return a + b;
+    }
+}
+
+// let miniCal = new Calculator;
+// console.log(miniCal.add(2, 3));  //doesnt work
+console.log(Calculator.add(2, 3));  //Need to call the class name (then it gonna work)
