@@ -150,3 +150,93 @@ console.log(Vehicle.isVehicle(car));
 
 console.log(Vehicle.isVehicle({ make: "Ford", model: "Mustang" }));
 // false
+
+
+
+/*Encapsulation, Polymorphism, Abstraction, and Getters/Setters
+Task 1: Encapsulation Using Getters and Setters
+
+Create a class BankAccount with a private property _balance. Add methods deposit(amount) and withdraw(amount). Use getters and setters to access and modify the _balance while ensuring the balance never goes negative.
+
+Task 2: Polymorphism with Method Overriding
+
+Create a class Shape with a method area() that returns 0. Create two subclasses Circle and Rectangle that override the area() method to calculate the area of a circle and a rectangle, respectively.*/
+
+// Task 1: Encapsulation
+class BankAccount {
+    #balance;
+
+    constructor(balance = 0) {
+        if (balance < 0) {
+            throw new Error("Balance cannot be negative");
+        }
+        this.#balance = balance;
+    }
+
+    get balance() {
+        return this.#balance;
+    }
+
+    set balance(amount) {
+        if (amount < 0) {
+            throw new Error("Balance cannot be negative");
+        }
+        this.#balance = amount;
+    }
+
+    deposit(amount) {
+        this.balance = this.#balance + amount;
+    }
+
+    withdraw(amount) {
+        if (amount > this.#balance) {
+            throw new Error("Insufficient funds");
+        }
+        this.balance = this.#balance - amount;
+    }
+}
+
+const account = new BankAccount(100);
+
+account.deposit(50);
+console.log(account.balance); // 150
+
+account.withdraw(30);
+console.log(account.balance); // 120
+
+
+// Task 2: Polymorphism
+class Shape {
+    area() {
+        return 0;
+    }
+}
+
+class Circle extends Shape {
+    constructor(radius) {
+        super();
+        this.radius = radius;
+    }
+
+    area() {
+        return Math.PI * this.radius ** 2;
+    }
+}
+
+class Rectangle extends Shape {
+    constructor(width, height) {
+        super();
+        this.width = width;
+        this.height = height;
+    }
+
+    area() {
+        return this.width * this.height;
+    }
+}
+
+const circle = new Circle(5);
+const rectangle = new Rectangle(10, 4);
+
+console.log(circle.area()); // 78.53981633974483
+console.log(rectangle.area()); // 40
