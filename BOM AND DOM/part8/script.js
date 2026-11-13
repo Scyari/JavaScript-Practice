@@ -1,11 +1,12 @@
 // example
 // document.querySelectorA('button')
 
-// let hold = document.getElementById('ChangeTextButton');
+// let hold = document.getElementById('changeTextButton');
 // console.log(hold);
 
-document.getElementById('ChangeTextButton').
-    addEventListener('click', function () {
-        console.log("this");
+document
+    .getElementById("changeTextButton")
+    .addEventListener("click", () => {
+        let paragraph = document.getElementById("myParagraph");
+        console.log(paragraph);
     });
-
