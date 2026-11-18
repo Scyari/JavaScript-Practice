@@ -37,3 +37,13 @@ document.getElementById("changeOrder")
         coffeeType.style.backgroundColor = "brown"   // Turning into CSS
         coffeeType.style.padding = "5px";            // Turning into CSS
     });
+
+// example 4
+//Creating and Inserting Elements 
+
+document.getElementById("addNewItem")
+    .addEventListener("click", function () {
+        let newItem = document.createElement("li");  //creating new item
+        newItem.textContent = "Eggs";  // Adding this item
+        document.getElementById("shoppingList").appendChild(newItem); // Adding new item (appendchild)
+    })
