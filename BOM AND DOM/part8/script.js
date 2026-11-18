@@ -26,3 +26,14 @@ document.getElementById("highlightFirstCity")
 
         citiesList.firstElementChild.classList.add("highlight");  //highlist the first element 
     })
+
+
+// example 3
+
+document.getElementById("changeOrder")
+    .addEventListener("click", function () {
+        let coffeeType = document.getElementById("coffeeType");
+        coffeeType.textContent = "Espresso";          //changing Text Content 1 to another
+        coffeeType.style.backgroundColor = "brown"   // Turning into CSS
+        coffeeType.style.padding = "5px";            // Turning into CSS
+    });
