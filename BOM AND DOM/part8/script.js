@@ -47,3 +47,13 @@ document.getElementById("addNewItem")
         newItem.textContent = "Eggs";  // Adding this item
         document.getElementById("shoppingList").appendChild(newItem); // Adding new item (appendchild)
     })
+
+// example 5
+//Removing DOM Elements
+
+document.getElementById("removeLastTask")
+    .addEventListener("click", function () {
+        let taskList = document.getElementById("taskList");
+        // taskList.remove(); //removing the whole list or the DOM
+        taskList.lastElementChild.remove(); //removing the last list from the Dom 1 by 1
+    })
