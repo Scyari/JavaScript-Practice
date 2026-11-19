@@ -88,4 +88,19 @@ document.getElementById("feedbackForm")
             textContent = `Feedback is: ${feedback}`
     });
 
+// Example 9:
+// DOM Content Loaded
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("domStatus").textContent = "Dom fully loaded";
+})
+
+//Example 10
+//CSS Classes Manipulation
+
+document.getElementById("toggleHighlight")
+    .addEventListener("click", function () {
+        let descriptionText = document.getElementById("descriptionText");
+        // descriptionText.classList.add("highlight");
+        descriptionText.classList.toggle("highlight");
+    });
