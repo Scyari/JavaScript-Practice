@@ -57,3 +57,11 @@ document.getElementById("removeLastTask")
         // taskList.remove(); //removing the whole list or the DOM
         taskList.lastElementChild.remove(); //removing the last list from the Dom 1 by 1
     })
+
+// example 6
+//Event Handling in the DOM
+
+document.getElementById("clickMeButton")
+    .addEventListener("click", function () {
+        alert("Button was clicked!");  //after clicking button, alert message appears
+    })
