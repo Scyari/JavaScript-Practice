@@ -65,3 +65,13 @@ document.getElementById("clickMeButton")
     .addEventListener("click", function () {
         alert("Button was clicked!");  //after clicking button, alert message appears
     })
+
+// example 7
+// Event Delegation
+
+document.getElementById("teaList")
+    .addEventListener("click", function (event) {
+        if (event.target && event.target.matches(".teaitem")) {
+            alert("You Selected: " + event.target.textContent)
+        }
+    })
