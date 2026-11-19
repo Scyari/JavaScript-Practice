@@ -75,3 +75,17 @@ document.getElementById("teaList")
             alert("You Selected: " + event.target.textContent)
         }
     })
+
+// example 8
+// Form Handling
+
+document.getElementById("feedbackForm")
+    .addEventListener("submit", function (event) {
+        event.preventDefault();
+        let feedback = document.getElementById("feedbackInput").value;
+        console.log(feedback);
+        document.getElementById("feedbackDisplay").
+            textContent = `Feedback is: ${feedback}`
+    });
+
+
