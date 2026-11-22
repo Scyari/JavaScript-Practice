@@ -12,4 +12,14 @@ function fetchData() {
 }
 
 // let response = fetchData();
-// console.log();
+// console.log();  //{Pending}
+
+fetchData()
+    .then((data) => {
+        console.log(data);  //Data fetched Successfully
+        return `Scyther`;
+    })
+    .then((value) => {
+        console.log(value);  //Scyther
+    })
+    .catch((error) => console.log(error));  
